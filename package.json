@@ -1,0 +1,24 @@
+{
+  "name": "singleton-pattern-example-nodejs",
+  "version": "1.0.0",
+  "description": "Sigleton example",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jkahwati/singleton-pattern-example-nodejs.git"
+  },
+  "author": "Jesus Kahwati",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jkahwati/singleton-pattern-example-nodejs/issues"
+  },
+  "homepage": "https://github.com/jkahwati/singleton-pattern-example-nodejs#readme",
+  "dependencies": {
+    "moment": "^2.26.0",
+    "rand-token": "^1.0.1"
+  }
+}
