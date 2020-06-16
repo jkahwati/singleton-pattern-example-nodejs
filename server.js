@@ -6,7 +6,6 @@ var rl = readline.createInterface({
   output: process.stdout
 });
 
-
 function searchPrompt() {
   rl.question('Obtener Token > ', input => {
     if( input == 'exit' )
@@ -20,6 +19,5 @@ function searchPrompt() {
     searchPrompt();
   });
 }
-
 
 searchPrompt();
