@@ -17,8 +17,8 @@ module.exports = class TokenConsumer {
 
     get(basic){
         console.log("*** Guardados:", this._data)
-        var comercio = this._data.find( com => com.basic === basic);
-        if (!comercio) {
+        var credential = this._data.find( cred => cred.basic === basic);
+        if (!credential) {
             console.log("*** Basic no encontrado")
             var response = this.callAPIToken(basic);
             console.log("*** Guardando token")
@@ -28,16 +28,16 @@ module.exports = class TokenConsumer {
             
         } else {
             console.log("*** Token encontrado");
-            if (this.isValid(comercio.expires_in)) {
-                console.log("*** Token es valido:", comercio.token)
-                return comercio.token
+            if (this.isValid(credential.expires_in)) {
+                console.log("*** Token es valido:", credential.token)
+                return credential.token
             } else {
                 console.log("*** Token no valido")
                 var resp = this.callAPIToken(basic)
-                comercio.token = resp.access_token;
-                comercio.expires_in = resp.expires_in;
+                credential.token = resp.access_token;
+                credential.expires_in = resp.expires_in;
                 console.log("*** actualiza")
-                return comercio.token
+                return credential.token
             }
         }
     }
