@@ -14,11 +14,17 @@ Diagrama UML:
 ![Offer General Diagram](diagrams/UML.png)
 
 
+Cuando usarla:
+
+1) Cuando quieras solo una instancia de esa clase en la aplicación entera
+2) Quieres que su información persista incluso si actualmente no hay referencias a ella.
+
+
 Beneficios:
 
-1) Solo una instancia de esa clase en la aplicación entera
-2) Puedes acceder a ella desde diferentes partes de la aplicación.
-3) Quieres que su información persista incluso si actualmente no hay referencias a ella.
+1) Acceso controlado a la instancia: Debido a que la clase Singleton encapsula su instancia, puede tener un control de cuándo y cómo los clientes acceden a ella.
+2) Reduce el número de variables: El patrón Singleton evita tener variables globales que sólo guardan instancias de clases.
+3) Permite cambiar el número de instancias: Este patrón facilita que se añadan más instancias de la clase Singleton en caso de que ya no queramos solo una. Además, se puede controlar el número de instancias que se usan. Lo único que hay que cambiar en la operación instance()
 
 Otros ejemplos:
 
